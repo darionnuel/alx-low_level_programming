@@ -1,25 +1,29 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
-/**
- * print_to_98 - print to 98
- * @n : number to start from
- * Return:0 or 1
- */
 
+/**
+ * print_to_98 - prints all the natural numbers from n to 98
+ *
+ * @n: interger to be tested
+ * Return: list of numbers
+ */
 void print_to_98(int n)
 {
+	int i;
 
-while (n < 98)
-{
-	printf("%i, ", n);
-	n++;
-}
-while (n > 98)
-{
-	printf("%i, ", n);
-	n--;
-}
-
-printf("98");
-putchar('\n');
+	if (n <= 98)
+	{
+		for (i = n; i < 98; i++)
+		{
+			printf("%i, ", i);
+		}
+	}
+	else
+	{
+		for (i = n; i > 98; i--)
+		{
+			printf("%i, ", i);
+		}
+	}
+	printf("98\n");
 }
